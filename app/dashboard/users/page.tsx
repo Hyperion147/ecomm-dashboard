@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card";
 import { users } from "@/lib/data";
 import {
@@ -24,7 +26,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function UsersPage() {
   return (
-    <div className="space-y-6 pt-6">
+    <div className="space-y-6 pt-4">
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Customers</h2>
@@ -39,7 +41,7 @@ export default function UsersPage() {
 
       <div className="flex items-center gap-4">
         <div className="relative flex-1">
-          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-2.5 top-1.5 h-4 w-4 text-muted-foreground" />
           <Input
             type="search"
             placeholder="Search users..."

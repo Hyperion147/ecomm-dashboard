@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { categories } from "@/lib/data";
 import {
@@ -20,7 +22,7 @@ import {
 
 export default function CategoriesPage() {
   return (
-    <div className="space-y-6 pt-6">
+    <div className="space-y-6 pt-4">
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Categories</h2>

@@ -116,7 +116,7 @@ export default function DashboardLayout({
                 className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
               >
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Command className="size-4" />
+                  <Command />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold uppercase tracking-wider">
@@ -136,9 +136,10 @@ export default function DashboardLayout({
                   asChild
                   tooltip={item.title}
                   isActive={pathname === item.url}
+                  className="px-4 gap-4"
                 >
                   <Link href={item.url}>
-                    <item.icon className="w-10 h-10" />
+                    <item.icon />
                     <span>{item.title}</span>
                   </Link>
                 </SidebarMenuButton>
@@ -235,10 +236,10 @@ export default function DashboardLayout({
         <SidebarRail />
       </Sidebar>
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 border-b px-4">
+        <header className="flex h-14 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 border-b px-4">
           <div className="flex items-center gap-2">
             <SidebarTrigger className="-ml-1" />
-            <Separator orientation="vertical" className="mr-2 h-4" />
+            <Separator orientation="vertical" className="mr-2 h-8" />
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">

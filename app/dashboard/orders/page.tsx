@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card";
 import { orders } from "@/lib/data";
 import {
@@ -36,7 +38,7 @@ export default function OrdersPage() {
   };
 
   return (
-    <div className="space-y-6 pt-6">
+    <div className="space-y-6 pt-4">
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Orders</h2>
@@ -52,7 +54,7 @@ export default function OrdersPage() {
 
       <div className="flex items-center gap-4">
         <div className="relative flex-1">
-          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-2.5 top-1.5 h-4 w-4 text-muted-foreground" />
           <Input
             type="search"
             placeholder="Search orders..."

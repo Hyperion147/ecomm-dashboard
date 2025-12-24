@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Card,
   CardContent,
@@ -57,7 +59,7 @@ export default function DashboardPage() {
   const totalUsers = users.length;
 
   return (
-    <div className="space-y-6 pt-6">
+    <div className="space-y-6 pt-4">
       <div className="flex items-center justify-between">
         <h2 className="text-3xl font-bold tracking-tight">Overview</h2>
       </div>
@@ -153,7 +155,7 @@ export default function DashboardPage() {
         <RoundedPieChart />
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-7">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
         <Card className="col-span-4 shadow-sm border-none bg-accent/5 overflow-hidden">
           <CardHeader className="bg-background/50 backdrop-blur-sm border-b">
             <CardTitle>Recent Orders</CardTitle>
@@ -161,11 +163,11 @@ export default function DashboardPage() {
               You made {orders.length} orders this period.
             </CardDescription>
           </CardHeader>
-          <CardContent className="p-0">
+          <CardContent className="px-2">
             <Table>
               <TableHeader>
                 <TableRow className="hover:bg-transparent">
-                  <TableHead className="w-[100px]">Order</TableHead>
+                  <TableHead className="w-[150px]">Order</TableHead>
                   <TableHead>Status</TableHead>
                   <TableHead>Customer</TableHead>
                   <TableHead className="text-right">Amount</TableHead>
@@ -189,7 +191,7 @@ export default function DashboardPage() {
                             ? "secondary"
                             : "outline"
                         }
-                        className="capitalize"
+                        className="capitalize -ml-2"
                       >
                         {order.status}
                       </Badge>

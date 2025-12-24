@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardContent,
@@ -36,7 +38,7 @@ import {
 
 export default function ProductsPage() {
   return (
-    <div className="space-y-6 pt-6">
+    <div className="space-y-6 pt-4">
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Products</h2>
@@ -51,7 +53,7 @@ export default function ProductsPage() {
 
       <div className="flex items-center gap-4">
         <div className="relative flex-1">
-          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-2.5 top-1.5 h-4 w-4 text-muted-foreground" />
           <Input
             type="search"
             placeholder="Search products..."
@@ -149,8 +151,8 @@ export default function ProductsPage() {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                        <DropdownMenuItem>Edit Product</DropdownMenuItem>
-                        <DropdownMenuItem>Duplicate</DropdownMenuItem>
+                        <DropdownMenuItem>Edit</DropdownMenuItem>
+                        <DropdownMenuItem>Delete</DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem
                           onClick={() =>
