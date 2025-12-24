@@ -26,6 +26,8 @@ import {
 } from "@/components/ui/table";
 import { MonochromeBarChart } from "@/components/charts/monochrome-bar-chart";
 import { ClippedAreaChart } from "@/components/charts/clip-area-chart";
+import { RainbowGlowGradientLineChart } from "@/components/charts/rainbow-glow-gradient-line";
+import { RoundedPieChart } from "@/components/charts/rounded-pie-chart";
 
 const salesConfig = {
   sales: {
@@ -38,6 +40,13 @@ const ordersConfig = {
   orders: {
     label: "Orders",
     color: "hsl(var(--primary))",
+  },
+};
+
+const visitorConfig = {
+  visitors: {
+    label: "Visitors",
+    color: "#0B84CE",
   },
 };
 
@@ -133,6 +142,15 @@ export default function DashboardPage() {
           labelKey="month"
           description="Total orders processed per month"
         />
+        <RainbowGlowGradientLineChart
+          data={monthlySales}
+          config={visitorConfig}
+          title="Visitor Trends"
+          dataKey="orders"
+          labelKey="month"
+          description="Website traffic overview"
+        />
+        <RoundedPieChart />
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-7">
